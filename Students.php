@@ -53,6 +53,7 @@ Class Student
      * @param String $sex
      * @param String $speciality
      * @param Array $marks
+     * 
      */
     public function __construct (
         String $firstName,
@@ -165,7 +166,31 @@ Class Student
         return $age;
     }
 
+    /**
+     * isMale
+     *
+     * @return bool
+     */
+    public function isMale() : bool
+    {
+        if($this->sex == "H") {
+            return True;
+        }
+        return False;
+    }
 
+    /**
+     * isDev
+     *
+     * @return bool
+     */
+    public function isDev() : bool
+    {
+        if($this->speciality == "DEV") {
+            return True;
+        }
+        return False;
+    }
 
 }
 
@@ -177,5 +202,9 @@ $st1 = new Student("kevin", "niel", "01/01/2000", "H", "DEV", [0, 0, 1, 0]);
 
 // Students 2
 $st2 = new Student("Olivier", "Quillet", "25/04/1980", "H", "DEV", [16, 20, 17, 18]);
+
+var_dump($st1->isDev());
+
+
 
 ?>
